@@ -13,5 +13,5 @@ class CarInfo extends Model
     ];
     protected $guarded = [];
     protected $primaryKey = 'voertuig_id';
-    protected $table = 'voertuig_informatie';
+    protected $table = 'car_info';
 }

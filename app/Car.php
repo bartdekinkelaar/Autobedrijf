@@ -10,5 +10,5 @@ class Car extends Model
         'naam', 'deuren', 'merk_id', 'bouwjaar', 'transmissie', 'prijs'
     ];
     protected $primaryKey = 'id';
-    protected $table = 'voertuigen';
+    protected $table = 'cars';
 }

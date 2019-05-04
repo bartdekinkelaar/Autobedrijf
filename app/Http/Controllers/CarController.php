@@ -19,10 +19,10 @@ class CarController extends Controller
         //Get all cars
         $cars       = Car::all();
         $carInfo    = CarInfo::all();
-        $carBrand   = CarBrand::all();
+        $carBrands   = CarBrand::all();
 
         return view('cars.index',
-            compact('cars','carInfo','carBrand'));
+            compact('cars','carInfo','carBrands'));
     }
 
     /**

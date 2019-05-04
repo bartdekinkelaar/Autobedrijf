@@ -16,7 +16,7 @@
                 ONZE OCCASIONS
             </div>
             <div class="row">
-                @include('basics.Cars.CarFilter')
+                @include('cars.filter')
                 <div class="col-md-9 auto_overzicht">
                     @foreach($cars as $car)
                         <ul class='auto_vak'>

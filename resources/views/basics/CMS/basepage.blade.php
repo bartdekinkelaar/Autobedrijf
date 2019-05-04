@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        @include('basics.cms.head')
+        @include('basics.CMS.head')
     </head>
     <body>
         <div class="cmsFull col-12">
-            @include('basics.cms.header')
+            @include('basics.CMS.header')
             <div class="col-10 cmsHome">
                 <div class="container cmsContainer">
-                    @include('basics.cms.header_title')
+                    @include('basics.CMS.header_title')
                     @yield('main')
                 </div>
             </div>

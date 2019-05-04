@@ -5,7 +5,7 @@
             <div class="row cmsHeading">
                 <h3> {{$voertuignaam}} </h3>
                 <h4> uit {{$bouwjaar}} </h4>
-                <a href="{{ route('alle_voertuigen') }}">
+                <a href="{{ route('CMS.cars') }}">
                     <button class="backTo_allItems">
                         <i class="fas fa-arrow-left"></i>
                         Terug
@@ -25,10 +25,10 @@
                                 </div>
                                 <div class="form-group">
                                         <?php
-                                            $merknaam   = DB::table('voertuig_merken')->where('merk_id', '=', $merk_id)->value('merknaam');
-                                            $merken     = DB::table('voertuig_merken')->get();
+                                            $brand  = $carBrands->where('brand_id', '=', $merk_id)->first();
+                                            $brands = $carBrands;
                                         ?>
-                                        <input type="text" name="merk" class="merk" placeholder="Merknaam:{{$merknaam}}"/>
+                                        <input type="text" name="merk" class="merk" placeholder="Merknaam:{{$brand->brandname}}"/>
 
                                         <input type="text" name="bouwjaar" class="bouwjaar" placeholder="Bouwjaar: {{$bouwdatum}}"/>
                                 </div>

@@ -18,27 +18,27 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($voertuigen as $voertuig)
+                        @foreach($cars as $car)
                             <tr>
                                 <?php
-                                $nice_price = number_format($voertuig->prijs,0,",",".");
-                                $merknaam   = DB::table('voertuig_merken')->where('merk_id', '=', $voertuig->merk_id)->value('merknaam');
-                                $merken     = DB::table('voertuig_merken')->get()
+                                $nice_price = number_format($car->prijs,0,",",".");
+                                $brand  = $carBrands->find($car->merk_id);
+                                $brands = $carBrands;
                                 ?>
-                                <th scope="row">{{$voertuig->naam}}</th>
+                                <th scope="row">{{$car->naam}}</th>
                                 <td>€ {{$nice_price}}</td>
-                                <td>{{$merknaam}}</td>
-                                <td>{{$voertuig->bouwjaar}}</td>
-                                <td>{{$voertuig->transmissie}}</td>
-                                <td>{{$voertuig->deuren}} deurs</td>
+                                <td>{{$brand->merknaam}}</td>
+                                <td>{{$car->bouwjaar}}</td>
+                                <td>{{$car->transmissie}}</td>
+                                <td>{{$car->deuren}} deurs</td>
                                 <td class="componentOpties cO_een">
-                                    <a href="{{ url('CMS/voertuig', ['id' => $voertuig->id]) }}">
+                                    <a href="{{ url('CMS/car', ['id' => $car->id]) }}">
                                         Bewerken
                                     </a>
                                 </td>
                                 <td class="componentOpties">
-                                    <a href="{{route('CMS.delete',$voertuig->id)}}">
-                                        {{--<a href="{{ url('CMS/delete_occasion', ['id' => $voertuig->id]) }}">--}}
+                                    <a href="{{route('CMS.delete',$car->id)}}">
+                                        {{--<a href="{{ url('CMS/delete_occasion', ['id' => $car->id]) }}">--}}
                                         Verwijderen
                                     </a>
                                 </td>

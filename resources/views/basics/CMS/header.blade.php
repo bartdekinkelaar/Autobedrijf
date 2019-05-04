@@ -5,7 +5,7 @@
             <p>Algemeen</p>
         </li>
         <li>
-            <a href="{{ route('cms_home') }}">Home</a>
+            <a href="{{ route('CMS.index') }}">Home</a>
         </li>
     </ul>
     <ul class="cmsMenu cM_components">
@@ -14,16 +14,16 @@
         </li>
         <li>
             {{--<a href="{{ route('nieuw_voertuig')}}">Occasions</a>--}}
-            <a href="{{ route('alle_voertuigen') }}">Occasions</a>
+            <a href="{{ route('CMS.cars') }}">Occasions</a>
         </li>
         <li>
-            <a href="{{ route('alle_kenmerken') }}">Kenmerken</a>
+            <a href="{{ route('CMS.features') }}">Kenmerken</a>
         </li>
         <li>
-            <a href="{{ route('alle_formulieren') }}">Formulieren</a>
+            <a href="{{ route('CMS.forms') }}">Formulieren</a>
         </li>
         <li>
-            <a href="{{ route('alle_pages') }}">Pagina's</a>
+            <a href="{{ route('CMS.pages') }}">Pagina's</a>
         </li>
     </ul>
 </div>
