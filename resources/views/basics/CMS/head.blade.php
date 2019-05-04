@@ -21,7 +21,7 @@
 {{--<link href="{{ asset('css/informatie.css') }}" rel="stylesheet" type="text/css">--}}
 {{--<link href="{{ asset('css/diensten.css') }}" rel="stylesheet" type="text/css">--}}
 {{--<link href="{{ asset('css/contact.css') }}" rel="stylesheet" type="text/css">--}}
-<link href="{{ asset('css/CMS/cms.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('CMS') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('css/CMS/cms_dashboard.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('css/CMS/cms_menu.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('css/CMS/cms_componenten.css') }}" rel="stylesheet" type="text/css">

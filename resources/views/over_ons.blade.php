@@ -21,6 +21,6 @@
                     Kom eens langs aan de Ringbaan 66 in Duiven (bij Arnhem), de koffie staat klaar.
                 </div>
             </div>
-            @include('basics.websites.contact_opnemen')
+            @include('basics.Web.contact_opnemen')
         @endsection
         @include('footer')

@@ -1,4 +1,4 @@
-@extends('basics.cms.basepage')
+@extends('basics.CMS.basepage')
 @section('main')
     <div class="row cmsFormulieren cmsComponent">
         <div class="kenmerken_container cnt fC componentenCnt">

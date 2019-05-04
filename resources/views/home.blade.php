@@ -20,6 +20,6 @@
                     </div>
                 </div>
             </div>
-            @include('basics.websites.diensten')
+            @include('basics.Web.diensten')
             @include('footer')
         @endsection

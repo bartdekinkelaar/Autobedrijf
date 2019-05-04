@@ -11,17 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/overons', function () {
-    return view('over_ons');
-});
+//Website pages
+Route::get('/home',     'WebController@home');
+Route::get('/service',  'WebController@service');
+Route::get('/over',     'WebController@aboutUs');
+Route::get('/contact',  'WebController@contact');
 
-Route::get('/service', function () {
-    return view('service');
-});
+//Car pages
+Route::resource('cars', 'CarController');
+Route::get('/voertuig/{id}', 	'AutoController@specifieke_auto');
+Route::get('/occasions', 	'AutoController@index');
+Route::post('/occasions', 	'AutoController@indexfilter');
+Route::get('/voertuig', 	'AutoController@voertuig');
 
+
+
+//CMS pages
 Route::get('/CMS/nieuw_voertuig', function () {
      return view('CMS/nieuw_voertuig');
  });
@@ -30,9 +35,9 @@ Route::get('/CMS/informatie', function () {
     return view('CMS/informatie');
 });
 
-Route::get('/front', function () {
-    return view('front');
-});
+//Route::get('/front', function () {
+//    return view('front');
+//});
 
 // CMS
 Route::get('/CMS', 				    'CMSController@index')->name('cms_home');
@@ -54,12 +59,5 @@ Route::get('/CMS/alle_pages',       'CMSController@alle_pages')->name('alle_page
 Route::get('/CMS/nieuwPage',        'CMSController@nieuw_page')->name('nieuwPage');
 Route::post('/CMS/nieuwPage',       'CMSController@store_page');
 Route::get('/CMS/CMSall_template/{type}',  'CMSController@new_CMSall')->name('ca_template');
-
-//Algemeen
-Route::get('/voertuig/{id}', 	'AutoController@specifieke_auto');
-Route::get('/occasions', 	'AutoController@index');
-Route::post('/occasions', 	'AutoController@indexfilter');
-Route::get('/voertuig', 	'AutoController@voertuig');
-Route::get('/contact',      'AutoController@contact');
 
 Route::get('/{page}', 'PageController@show');

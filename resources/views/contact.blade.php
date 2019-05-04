@@ -59,6 +59,6 @@
                 </div>
             </div>
         </div>
-        @include('basics.websites.maps_info')
+        @include('basics.Web.maps_info')
         @include('footer')
         @endsection

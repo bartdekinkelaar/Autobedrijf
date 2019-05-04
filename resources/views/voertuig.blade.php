@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    @include('basics.websites.headpart')
+    @include('basics.Web.headpart')
     <body>
-        @include('basics.websites.header')
+        @include('basics.Web.header')
         <div class="col-md-12">
             <div class="voertuigpage row">
                 <div class="row">

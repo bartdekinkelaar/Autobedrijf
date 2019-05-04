@@ -1,4 +1,4 @@
-@extends('basics.cms.basepage')
+@extends('basics.CMS.basepage')
 @section('title', $pagename)
 @section('main')
     <div class="row cmsVoertuigen cmsComponent">

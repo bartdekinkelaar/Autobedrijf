@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Voertuig;
 
-class VoertuigController extends Controller
+class CarInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -46,8 +45,6 @@ class VoertuigController extends Controller
      */
     public function show($id)
     {
-        //
-        $car
         //
     }
 

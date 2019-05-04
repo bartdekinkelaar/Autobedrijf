@@ -2,10 +2,10 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <title>@yield('title') - Autobedrijf Caddie</title>
-        @include('basics.websites.headpart')
+        @include('basics.Web.headpart')
     </head>
     <body>
-        @include('basics.websites.header')
+        @include('basics.Web.header')
             @yield('main')
     </body>
 </html>

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VoertuigInfo extends Model
+class CarInfo extends Model
 {
     protected $fillable = [
         'brandstof', 'kleur', 'kilometers', 'trekgewicht', 'gewicht', 'vermogen',

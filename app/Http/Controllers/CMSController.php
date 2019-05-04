@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use App\Auto;
-use App\VoertuigInfo;
 use App\VoertuigKenmerk;
 use Illuminate\Support\Facades\Schema;
 
@@ -306,7 +304,7 @@ class CMSController extends Controller
             $countItems = count($getItems);
         }
         $merken     = DB::table('voertuig_merken')->get();
-        return view('basics.cms.CMSall_template',
+        return view('basics.CMS.CMSall_template',
             compact('cmsAll_info','tableValues',
                 'merken','pagename','getItems','countItems'));
     }

@@ -1,4 +1,4 @@
-@extends('basics.cms.basepage')
+@extends('basics.CMS.basepage')
 @section('main')
     <div class="col-10 cmsHome">
         <div class="container cmsContainer">
