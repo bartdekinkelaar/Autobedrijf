@@ -1,0 +1,54 @@
+html, body, .cmsFull, .cmsHeader {
+    height:100% !important;
+}
+/* Floats */
+.cmsHome, .cmsHeader,
+.occasion, .occasion_list, .occasion_list li,
+.cmsHeader, .cmsContainer, .cmsFull,.itemVak,
+.dC_top, .dC_middle, .dC_occasions, .dC_stats,
+.itemVak p, .itemVak i, .itemVak h4, .dC_contacts,
+.dC_sold {
+    float:left;
+}
+
+/* CMS Dashboard items parts & vakken */
+.dC_part {
+    margin-top:13px;
+    margin-bottom:13px;
+}
+.itemVak {
+    padding: 5px 2px;
+}
+
+/* CMS Algemeen */
+.cmsFull {
+    font-family: 'Lato', sans-serif;
+}
+.cmsFull, .cmsHome, .cmsContainer {
+    padding: 0px;
+}
+.cmsFull, .cmsHome {
+    background-color:#F0F0F0;
+}
+.cmsHeading {
+    background: white;
+    color:#484848;
+}
+.cmsHeading h3, .cmsDashboard, .cmsVoertuigen {
+    padding-left:10px;
+}
+.cmsHeading h3 {
+    font-weight: bold;
+    margin-top:4px;
+    text-transform: capitalize;
+}
+.cmsHeading h4 {
+    padding-left: 6px;
+    padding-top: 8px;
+}
+.CMS {
+	background-color: #e5ebef;
+}
+.cmsContainer {
+    width:100%;
+}

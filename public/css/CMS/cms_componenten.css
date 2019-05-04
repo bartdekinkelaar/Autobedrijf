@@ -1,0 +1,78 @@
+.componentenPart {
+    width: 100%;
+}
+.componentenItem {
+    background-color:white;
+    border:2px solid #dedede;
+    margin: 28px;
+    padding: 4px;
+}
+.componentenCnt {
+    min-width:75%;
+}
+.componentenCnt .fas {
+    font-size:24px;
+    background-color:#e54141;
+    color:#efefef;
+    padding:9px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.cI_tabel {
+    text-align: left;
+    font-size: 13px;
+    color: #17191c;
+    margin-bottom: 0px;
+}
+.cI_tabel th,
+.cI_tabel td {
+    padding:6px !important;
+    height:28px !important;
+    max-height: 28px !important;
+    max-width:360px !important;
+}
+.cI_tabel a {
+    color: #313334;
+}
+.cI_tabelUitleg {
+    font-size:13px;
+}
+.addComponent_item,
+.backTo_allItems {
+    background-color: white;
+    border: 1px solid #6c6c6c;
+    margin: 6px 0px 0px 6px;
+}
+.backTo_allItems {
+    margin-left: 12px !important;
+    margin-top: 8px !important;
+}
+.fg-button {
+    width: 100%;
+}
+.componentenItem form {
+    padding-top:15px;
+    padding-left:5px;
+    padding-bottom:10px;
+}
+.componentenItem form input::first-letter,
+.componentenItem form select::first-letter
+{
+    text-transform: capitalize;
+}
+.componentenItem form input,
+.componentenItem form select {
+    border: none;
+    color: gray;
+    width:36%;
+    min-width:210px;
+    margin-right:6%;
+    border-bottom: 1px solid lightgray;
+}
+.componentOpties {
+    background-color:#f4f5f7;
+}
+.cO_een {
+    border-left: 2px solid #dee2e6;
+}

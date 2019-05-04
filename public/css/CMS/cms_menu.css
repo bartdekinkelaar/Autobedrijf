@@ -1,0 +1,28 @@
+/*CMS header en menu */
+.cmsHeader {
+    padding: 0px;
+    background-color:#2d3e4e;
+    border: 0px;
+    display: block;
+    margin: 0px;
+    /*min-width:212px;*/
+}
+.cmsHeader .cmsLogo {
+    height:84px;
+    margin-left:6px;
+}
+.cmsMenu {
+    padding-left:0px;
+    margin-left:12px;
+}
+.cmsMenu a, .cmsMen a:hover {
+    font-size:15px;
+    color:#dadada;
+}
+.cmsMenu .cmName {
+    font-size:12px;
+    color: #6a6a6a;
+}
+.cmsMenu .cmName p {
+    margin-bottom: 0px;
+}

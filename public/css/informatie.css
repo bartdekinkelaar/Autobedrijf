@@ -1,0 +1,88 @@
+.overons_body .diensten-row {
+	margin-top:0px;
+	background-color:#eaeaea;
+}
+.diensten-row, .contact-row {
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom:30px;
+    padding-top:15px;
+}
+.diensten-row {
+    background-color:#f2f2f2;
+}
+.contact-row {
+    background-color: #e51a1a;
+}
+.dienstkop, .over_kop {
+    text-align: center;
+    font-size:26px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom:5px;
+    width:100%;
+}
+.diensten-row .dienstkop, .over_kop {
+    color: #000;
+}
+.contact-row .dienstkop {
+    color: #fff;
+}
+.dienstkop:after, .over_kop:after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 4px auto;
+    width: 120px;
+}
+.diensten-row .dienstkop:after, .over_kop:after {
+    background: none repeat scroll 0 0 #ec4c4c;
+}
+.contact-row .dienstkop:after {
+    background: none repeat scroll 0 0 #f2f2f2;
+}
+.dienst img {
+    width:auto;
+    border:3px solid #e50000;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+.dienst_titel {
+    margin: auto;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #e50000;
+}
+.dienst_button {
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight:400;
+    text-align: center;
+    line-height: 2;
+    width:60%;
+    margin:auto;
+    padding: 6px 15px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    min-width: 100px;
+}
+.diensten-row .dienst_button {
+    background-color: #ce0000;
+    border: 3px solid #ce0000;
+}
+.contact-row .dienst_button {
+	background-color: #e94444;
+    border: 3px solid #e94444;
+}
+.dienst_button a {
+    color:#fff;
+}
+.contact-row .col-lg-4 {
+    margin: auto;
+}

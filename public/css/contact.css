@@ -1,0 +1,72 @@
+.contact_info, .contact_tijden {
+	/*float:left;*/
+	display: block;
+	margin: 0 auto;
+	/*margin-top:0px;*/
+}
+.contactvak {
+	margin: auto;
+}
+.contact_titel {
+	font-size:24px;
+	color:#323232;
+}
+.contact_lijst, .contact_form {
+	list-style: none;
+	font-size:15px;
+}
+.bedrijfstitel {
+	font-size:17px;
+	font-style: italic;
+	padding-bottom:8px;
+	padding-left:0px;
+}
+.contact_item {
+    height: 30px;
+}
+.left_item, .right-item {
+    /*width: 50%;*/
+    min-width: 100px;
+    display: inline-block;
+}
+#map {
+	height: 300px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+    float:left;
+}
+.leftmaps, .rightmaps {
+	width:50%;
+	float: left;
+	display: block;
+}
+.contact_form {
+	margin: auto;
+}
+.contact_form .form-group {
+	margin-bottom:10px;
+}
+.contact_form form input, .contact_form form textarea {
+	padding: 6px;
+    margin: 4px;
+    border: 2px solid #e3e3e3;
+    border-radius: 0px;
+    color: black;
+    width:100%;
+    min-width:260px;
+}
+.contact_form form label {
+	font-size: 15px;
+    color: black;
+    font-weight: 600;
+    margin-bottom:0px;
+    padding: 0px;
+}
+.contact_form textarea {
+	min-height: 75px;
+}
+.contact_form button {
+    margin: auto;
+    display: block;
+    background-color: #e50000;
+    border-color: #b70000;
+}

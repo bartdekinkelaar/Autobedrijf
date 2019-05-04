@@ -1,0 +1,58 @@
+.service_body .col-md-12 {
+	padding: 0px;
+}
+.diensten_overzicht, .diensten_overzicht li, .dienstenoverzicht li img {
+	float:left;
+}
+.diensten_overzicht {
+	padding-left:0px;
+    position: absolute;
+    width: 100%;
+    float: left;
+	margin-top:12px;
+	margin-bottom:0px;
+}
+.diensten_overzicht li {
+	min-height:240px;
+	width: 50%;
+    height: 100%;
+    top: 0;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+.diensten_overzicht li img {
+	width:100%;
+	display: inline-block;
+	max-height: 275px;
+}
+.diensten_overzicht .tekst {
+	font-size:18px;
+	text-align: center;
+	padding:28px 32px;
+}
+.tekst:nth-child(2) {
+	background-color:#e51a1a;
+	color: white;
+}
+.backwit .dienst_button a {
+	background-color: white;
+	border:3px solid #e51a1a;
+	color:#e51a1a;
+	padding: 7px 14px;
+}
+.backrood .dienst_button a {
+	background-color: #e51a1a;
+	border:3px solid #FFF;
+	color:#FFF;
+	padding: 7px 14px;
+}
+.diensten_overzicht .dienst_button {
+	margin-top: 10px;
+}
+.img_reparaties {
+	background-image: url("../img/dienstfoto_1.png") !important;
+}
+.img_apk {
+	background-image: url("../img/dienstfoto_2.png") !important;
+}

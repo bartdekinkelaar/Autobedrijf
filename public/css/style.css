@@ -1,0 +1,63 @@
+html, body {
+    background-color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+.row {
+    margin-left:0px;
+    margin-right: 0px;
+    width: 100%;
+}
+.center {
+    height:500px;
+    width: 100%;
+}
+.center .container {
+    background: #fcfcfc;
+}
+.slider {
+    height:auto;
+    width:100%;
+    /*background-color:gray;*/
+}
+.slider img {
+    width: 100%;
+}
+.over_tekst {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin: auto;
+}
+.over_ons {
+    margin-bottom:5px;
+}
+.hoofdcol, .slider, .diensten-row {
+    float:  left;
+}
+.col-md-12 {
+    float:left;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+@media only screen and (min-width:881px) {
+    .dienstenvak {
+        display: none !important;
+    }
+}
+.swappic {
+    width:500px;
+}
+.hoofdcol .over_tekst {
+    margin-bottom: 0px;
+}
+.header {
+    height: 91px;
+}
+.btn-primary {
+    background-color: #e50000;
+    border-color: #e50000;
+}
+.col-12 {
+    float: left;
+}

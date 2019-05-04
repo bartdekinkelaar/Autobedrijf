@@ -1,0 +1,69 @@
+.menu li { 
+    float:left;
+    margin-left:10px;
+    margin-right:10px;
+    text-decoration: none;
+    border-bottom: 2.5px solid #e50000;
+}
+.menu a, .menu a:hover  {
+    color:black;
+    text-decoration: none;
+}
+.logo {
+    margin-top:0px;
+    margin-left:50px;
+    float:left;
+    max-height:88px;
+}
+.menu {
+    float:right;
+    font-size:20px;
+    color:black;
+    list-style: none;
+    margin-top: 32px;
+    margin-right: 48px;
+}
+.navbar {
+    background-color: #fff;
+    border-color:#fff;
+    border-bottom: 2px solid #f2f2f2;
+}
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #e50000;
+    border-color:#e50000;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #e50000;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #e50000;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-bottom: 2px solid rgb(242, 242, 242);
+    border-color:rgb(242, 242, 242);
+}
+ul, li {
+	list-style: none;
+}
+.navbar-toggler {
+	float:left;
+}
+.navbar-brand {
+	height:auto;
+	float:right;
+    margin: 0px;
+}
+.logores {
+    display: block;
+    float: left !important;
+    height: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+	color:#e50000;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

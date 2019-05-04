@@ -1,0 +1,262 @@
+@media only screen and (max-width: 880px) {
+    .formpart {
+        width: 100%;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .hoofdcol {
+        display: none;
+    }
+    .col-lg-4.col-md-4.col-sm-4.col-xs-12 {
+        margin-top: 10px;
+    }
+    .diensten-row, .contact-row {
+        margin-top: 10px !important;
+        /*   margin-top: 24px !important;*/
+        padding-bottom: 20px !important;
+    }
+    .over_tekst {
+        max-width:85% !important;
+    }
+    .logores {
+        margin:auto;
+        float: left !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .contact_item {
+        height:10px;
+    }
+}
+@media only screen and (min-width:768px) {
+    .contact_lijst, .contact_form {
+        min-width: 270px;
+    }
+    .contact_item {
+        height:22px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .rightmaps {
+        width:100%;
+        float: left;
+        display: block;
+    }
+    .leftmaps {
+        display: none;
+    }
+    .contact_item {
+        margin-bottom: 1rem;
+    }
+    .left_item, .right-item {
+        margin-bottom: 0px;
+    }
+}
+@media only screen and (min-width: 901px) {
+    .contact_lijst {
+        margin: auto;
+    }
+    .contact_item {
+        padding:1px 16px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .diensten_overzicht li {
+        width: 100% !important;
+        position:relative;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .diensten_overzicht .tekst {
+        padding:36px 24px;
+        font-size:18px;
+    }
+    .diensten_overzicht li {
+        max-height: 280px;
+    }
+    .backrood .dienst_button a {
+        padding: 2px 8px;
+    }
+    .dienst_button {
+        min-width:210px;
+        width:100%;
+    }
+}
+@media only screen and (min-width:925px) and (max-width:970px) {
+    .menu  {
+        margin-top: 10px;
+        float:left;
+    }
+}
+@media only screen and (min-width:460px) and (max-width:925px) {
+    .navbar {
+        max-height: 124px;
+    }
+}
+@media only screen and (max-width: 924px) {
+    .nietresponsive, .nietresponsive .menu, .nietresponsive .header, .nietresponsive .logo  {
+        display:none !important;
+    }
+    .navbar {
+        float: left;
+        width: 100% !important;
+        display: block;
+        height: 100%;
+        max-height: 100%;
+    }
+    .responsive {
+        display:block !important;
+        border-bottom: 2px solid #f2f2f2;
+        float:left;
+        min-height:100px;
+    }
+    .navbar {
+        border-bottom:none;
+    }
+}
+@media only screen and (min-width: 925px) {
+    .nietresponsive {
+        display:block !important;
+        border-bottom: 3px solid #c9c9c9;
+        float:left;
+        min-height:91px;
+        height:91px;
+        margin-bottom:0px !important;
+    }
+    .responsive, .responsive .menu, .responsive .logo {
+        display:none !important;
+    }
+}
+@media only screen and (max-width:600px) {
+    .navbar {
+        max-height: 124px;
+    }
+    .navbar-brand {
+        float: left !important;
+        max-width:98%;
+    }
+    nav button {
+        max-width: 100px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .dienst_button {
+        width:100%;
+    }
+    .diensten_overzicht .tekst {
+        padding:36px 24px !important;
+    }
+}
+@media only screen and (min-width:460px) and (max-width: 920px) {
+    .auto_button button {
+        min-width:90px;
+    }
+}
+@media only screen and (min-width:460px) and (max-width: 529px) {
+    .auto_bouwjaar, .auto_merk, .auto_kilometers {
+        width: 50%;
+        float: left;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .auto_vak {
+        width:100%;
+    }
+    .filterpage {
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+@media only screen and (min-width: 530px) and (max-width: 920px) {
+    .auto_vak {
+        width:44%;
+        margin-right:3% !important;
+        float: left;
+    }
+}
+@media only screen and (max-width: 920px) {
+    .auto_vak {
+        margin: 10px 0px;
+        border: 1px solid lightgray;
+        height:auto;
+        list-style: none;
+        float:left;
+        padding: 0px 0px 10px 0px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .voertuig_slider img {
+        height: auto;
+        /* max-width: 580px;*/
+        width:100%;
+    }
+    .voertuig_menu li {
+        float:left;
+        width: 30%;
+        margin-right: 3%;
+    }
+    .voertuig_informatie .voertuig_info li {
+        width: 100%;
+        display: inline-block;
+    }
+    .filterpage .collapse:not(.show) {
+        display: none !important;
+    }
+    .filtershow {
+        display: block !important;
+    }
+    .occasion_filter {
+        max-width:100% !important;
+        flex:0 0 100% !important;
+        float: left;
+        margin-bottom:12px;
+    }
+    .occasion_filter button {
+        margin: auto;
+    }
+    .col-md-9 {
+        margin: auto;
+    }
+    .auto_button button {
+        margin-left: 0%;
+    }
+}
+@media only screen and (min-width: 920px) {
+    .auto_vak {
+        width:25%;
+        margin: 0% 2% 3% 2% !important;
+        float: left;
+        min-width:184px;
+    }
+}
+@media only screen and (min-width: 920px) and (max-width: 1200px) {
+    .auto_overzicht {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+}
+@media only screen and (min-width:661px) and (max-width:1000px) {
+    .formpart .form-group  {
+        width: 50%;
+        float: left;
+        display: inline-block;
+    }
+    .kleingroup {
+        min-height:84px;
+    }
+    .grootgroup {
+        min-height:124px;
+    }
+    .buttongroup button {
+        margin-top: 80px;
+        float: right;
+        margin-right: 9%;
+    }
+    .formpart input, .formpart select {
+        padding: 3px 6px;
+    }
+    .formpart {
+        float: left;
+        height: auto;
+    }
+}

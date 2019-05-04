@@ -1,0 +1,247 @@
+.formpart {
+	border:3px solid #ededed;
+}
+.formpart form {
+    padding: 12px;
+    padding-bottom: 0px;
+	display: inline-block;
+}
+.formpart label {
+	font-size:15px;
+	color:black;
+	font-weight:600;
+	padding: 6px 0px 0px 0px;
+}
+.formpart input, .formpart select {
+	padding:7px;
+    margin:5px;
+	border: 2px solid #e3e3e3;
+    border-radius: 0px;
+    color:black;
+    width:91%;
+}
+.form-control:focus {
+	border-color:#fff;
+}
+.filterpage {
+	padding-left:30px;
+	padding-right:30px;
+}
+.filterpage .col-md-2 {
+	flex: 0 0 20%;
+    max-width: 20%;
+}
+.voertuigpage {
+	margin-top:20px;
+}
+.add_voertuig label {
+	text-align: center;
+}
+.auto_vak {
+	width:24%;
+	float:left;
+	margin: 0% 4% 3% 5%;
+    border: 1px solid lightgray;
+	height:auto;
+	list-style: none;
+	padding: 0px;
+}
+.auto_tekst {
+	margin-left: 6%;
+}
+.auto_naam {
+	font-size:20px;
+}
+.auto_button button {
+	font-size:16px;
+	font-weight: bold;
+	display: block;
+	text-align:center;
+	margin-right:6%;
+	margin-bottom:10px;
+    background: #f1f1f1;
+    color: #e50000;
+    border: 0px;
+    float:right;
+}
+.auto_button a {
+	text-decoration-style: none;
+	color:#e50000;
+}
+.auto_bouwjaar, .auto_kilometers, .auto_merk, .auto_prijs {
+	font-size:15px;
+}
+.auto_foto {
+	width:100%;
+	height: auto;
+}
+.auto_foto img {
+	width: 90%;
+	margin:5% 5% 1% 5%;
+	height: auto;
+}
+.autofilter {
+	font-size:16px;
+	font-weight: bold;
+	list-style: none;
+	float: left;
+	width: 95%;
+	background:#edeff0;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	border:1px solid lightgray;
+}
+.autofilter li {
+	float:left;
+	display: block;
+	width:30%;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.autofilter select, .autofilter input {
+	height: 25px;
+	font-size:14px;
+	color:lightgray;
+	width:100px;
+	padding-left:5px;
+}
+.autofilter ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    opacity: 1; /* Firefox */
+}
+.voertuig_informatie, .voertuig_basis, .voertuig_slider {
+	float:left;
+}
+.voertuig_slider img {
+	height:auto;
+	max-width: 580px;
+}
+.voertuignaam {
+	font-size:32px;
+	font-weight:bold;
+}
+.voertuig_informatie {
+	margin-top:15px;
+}
+.voertuiginfo_vak {
+	max-width:590px;
+}
+.voertuig_info, .voertuig_menu {
+	width:100%;
+	padding:0px;
+	/*max-width:590px;*/
+	list-style: none;
+}
+.voertuig_menu {
+	min-height: 35px;
+    margin: 0px;
+}
+.voertuig_menu, .voertuig_info, .voertuig_prijs {
+	max-width:100%;
+	width: 580px;
+}
+.voertuig_informatie .voertuig_info li {
+	width: 50%;
+	display:inline-block;
+}
+.voertuig_info  {
+	display:block;
+	margin: 0px;
+    margin-bottom: 15px;
+	padding-top:5px;
+    padding-bottom: 10px;
+	background-color:#f3f3f3;
+}
+.voertuig_basis .voertuig_menu li {
+	width:100%;
+}
+.voertuig_menu li {
+	float:left;
+    width: 25%;
+    margin-right: 6%;
+	padding:5px 10px;
+	color:#6e6e6e;
+	font-weight: bold;
+	text-align: center;
+	background:#eaeaea;
+	min-height:32px;
+	font-size:17px;
+/*	border-top-right-radius: 40%;
+	border-top-left-radius: 40%;*/
+}
+.voertuig_info li {
+	padding-top: 4px;
+    padding-bottom: 4px;
+    width: 94%;
+    font-size: 14px;
+    display: block;
+    min-height: 30px;
+    padding-left: 15px;
+}
+.voertuig_info #kenmerk_titel {
+	font-weight: bold;
+	text-transform: uppercase;
+	min-width:50%;
+}
+.voertuig_info #kenmerk_tekst {
+	font-style: italic;
+}
+.voertuig_info #kenmerk p {
+    float: left;
+    margin-bottom:5px;
+	text-align:left;
+}
+.col-md-10 {
+/*	max-width: 100%;
+	flex: 0 0 100%;*/
+	margin: auto;
+}
+.col-md-11 {
+	padding: 0px;
+    margin: auto;
+}
+.voertuigbasis {
+	margin: auto;
+	min-width: 84%;
+}
+.voertuig_prijs {
+	background-color:#e4e4e4;
+	color:#e50000;
+	float:left;
+	font-size:20px;
+	font-weight: bold;
+	padding: 10px;
+}
+.filtershow {
+	background-color:white;
+	text-transform: uppercase;
+	border:none;
+	font-size:18px;
+}
+.fa-angle-down {
+	background-color: red;
+    color: red;
+    font-weight: bold;
+}
+.filterpage .collapse:not(.show) {
+    display: block;
+}
+.occasion_filter  {
+	margin-top:6px;
+}
+.filtershow {
+	display: none;
+}
+.voertuig_prijs #vtitel {
+	color: black;
+    float: left;
+    margin-bottom:0px;
+    padding-right:10px;
+}
+.voertuig_menu a {
+	text-decoration: none;
+	color: black;
+}
+.voertuig_informatie {
+	min-height:140px;
+}
