@@ -8,7 +8,7 @@
         $singleName     = $pageInfo['single'];
         if($hasCreator == 1 && isset($singleName))
         {
-            $newPage_title  = "nieuw" . $singleName;
+            $newPage_title  = "new" . $singleName;
 
             if( Route::has($newPage_title) )
             {?>

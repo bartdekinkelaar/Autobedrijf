@@ -14,14 +14,13 @@
                         <div class="contactvak col-md-9">
                             <p class="contact_titel">CONTACTINFORMATIE</p>
                             <ul class="contact_lijst col-md-9">
-                                @foreach ($informatie as $info)
-                                    <li class="bedrijfstitel">  {{$info->Naam}}</li>
-                                    <li class="contact_item">   {{$info->adres}}</li>
-                                    <li class="contact_item">   {{$info->postcode}} {{$info->plaats}}</li>
-                                    <li class="contact_item"></li>
-                                    <li class="contact_item">   {{$info->email}}</li>
-                                    <li class="contact_item">   {{$info->telefoon}}</li>
-                                @endforeach
+                                <?php $general    = get_general_info();?>
+                                <li class="bedrijfstitel">  {{ $general['companyName'] }} </li>
+                                <li class="contact_item">   {{ $general['companyAddress'] }} </li>
+                                <li class="contact_item">   {{ $general['companyZipcode'] }} {{ $general['companyCity'] }}</li>
+                                <li class="contact_item"></li>
+                                <li class="contact_item">   {{ $general['companyEmail'] }} </li>
+                                <li class="contact_item">   {{ $general['companyPhone'] }} </li>
                             </ul>
                         </div>
                     </div>

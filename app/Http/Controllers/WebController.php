@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Web;
+use DB;
 
 class WebController extends Controller
 {
@@ -25,8 +26,7 @@ class WebController extends Controller
     public function contact()
     {
         //Get contact information
-        $informatie = DB::table('informatie')->get();
-
-        return view('contact', ['informatie' => $informatie]);
+        $information    = DB::table('general')->get();
+        return view('contact', compact('information'));
     }
 }

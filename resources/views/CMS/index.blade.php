@@ -46,13 +46,13 @@
                                 <th> Prijs </th>
                                 <th> Toegevoegd </th>
                             </tr>
-                            @foreach($voertuigen as $voertuig)
+                            @foreach($cars as $car)
                                 <?php
-                                $nice_price = number_format($voertuig->prijs,0,",",".");
-                                $toegevoegd = date("d F", strtotime($voertuig->created_at));
+                                $nice_price = number_format($car->price,0,",",".");
+                                $toegevoegd = date("d F", strtotime($car->created_at));
                                 ?>
                                 <tr>
-                                    <td> {{$voertuig->naam}} </td>
+                                    <td> {{$car->name}} </td>
                                     <td> € {{$nice_price}} </td>
                                     <td> {{$toegevoegd}} </td>
                                 </tr>
@@ -74,7 +74,7 @@
                                 @foreach($verkochte as $verkocht)
                                     <?php
                                     $nice_verkocht = number_format($verkocht->prijs,0,",",".");
-                                    $verkocht = date("d F", strtotime($voertuig->updated_at));
+                                    $verkocht = date("d F", strtotime($car->updated_at));
                                     ?>
                                     <tr>
                                         <td> {{$verkocht->voertuig_id}} </td>
@@ -100,13 +100,13 @@
                                 <th> Prijs </th>
                                 <th> Toegevoegd </th>
                             </tr>
-                            @foreach($voertuigen as $voertuig)
+                            @foreach($cars as $car)
                                 <?php
-                                $nice_price = number_format($voertuig->prijs,0,",",".");
-                                $toegevoegd = date("d F", strtotime($voertuig->created_at));
+                                $nice_price = number_format($car->price,0,",",".");
+                                $toegevoegd = date("d F", strtotime($car->created_at));
                                 ?>
                                 <tr>
-                                    <td> {{$voertuig->naam}} </td>
+                                    <td> {{$car->name}} </td>
                                     <td> € {{$nice_price}} </td>
                                     <td> {{$toegevoegd}} </td>
                                 </tr>

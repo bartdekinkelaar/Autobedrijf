@@ -37,7 +37,7 @@
                                     <td> {{$feature->kenmerk_standaard}} </td>
                                     <td class="cI_tabelUitleg"> {{$feature->kenmerk_uitleg}} </td>
                                     <td class="componentOpties cO_een">
-                                        <a href="{{ url('CMS/kenmerk', ['id' => $feature->kenmerk_id]) }}">
+                                        <a href="{{ url('CMS/feature', ['id' => $feature->kenmerk_id]) }}">
                                             Bewerken
                                         </a>
                                     </td>
@@ -50,7 +50,7 @@
                                 @if($feature_counter == 10)
                                     <tr>
                                         <td colspan="6">
-                                            <a href="{{ url('CMS/allFeatures/'.$next_page) }}">Volgende pagina</a>
+                                            <a href="{{ url('CMS/features/'.$next_page) }}">Volgende pagina</a>
                                         </td>
                                     </tr>
                                 @endif
@@ -62,7 +62,7 @@
                                     <td> {{$feature->kenmerk_standaard}} </td>
                                     <td class="cI_tabelUitleg"> {{$feature->kenmerk_uitleg}} </td>
                                     <td class="componentOpties cO_een">
-                                        <a href="{{ url('CMS/occasion', ['id' => $feature->kenmerk_id]) }}">
+                                        <a href="{{ url('CMS/car', ['id' => $feature->kenmerk_id]) }}">
                                             Bewerken
                                         </a>
                                     </td>
@@ -77,9 +77,9 @@
                                     <tr>
                                         <td colspan="6">
                                             @if($last_page == 0)
-                                                <a href="{{ route('allFeatures') }}">Vorige pagina</a>
+                                                <a href="{{ route('CMS.features') }}">Vorige pagina</a>
                                             @else
-                                                <a href="{{ url('CMS/allFeatures/'.$last_page) }}">Vorige pagina</a>
+                                                <a href="{{ url('CMS/features/'.$last_page) }}">Vorige pagina</a>
                                             @endif
                                         </td>
                                     </tr>

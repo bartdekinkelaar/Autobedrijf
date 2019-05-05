@@ -3,8 +3,8 @@
     <div class="col-10 cmsHome">
         <div class="container cmsContainer">
             <div class="row cmsHeading">
-                <h3> {{$voertuignaam}} </h3>
-                <h4> uit {{$bouwjaar}} </h4>
+                <h3> {{$car->name}} </h3>
+                <h4> uit {{$build_date->year}} </h4>
                 <a href="{{ route('CMS.cars') }}">
                     <button class="backTo_allItems">
                         <i class="fas fa-arrow-left"></i>
@@ -19,28 +19,28 @@
                             <form action="voertuig" method="POST">
                                 {!! csrf_field() !!}
                                 <div class="form-group">
-                                        <input type="text" name="naam" class="naam" placeholder="Naam: {{$naam}}"/>
+                                        <input type="text" name="naam" class="naam" placeholder="Naam: {{$car->name}}"/>
 
-                                        <input type="text" name="prijs" class="prijs" placeholder="Prijs: {{$prijs}}"/>
+                                        <input type="text" name="prijs" class="prijs" placeholder="Prijs: {{$car->price}}"/>
                                 </div>
                                 <div class="form-group">
                                         <?php
-                                            $brand  = $carBrands->where('brand_id', '=', $merk_id)->first();
+                                            $brand  = $carBrands->where('brand_id', '=', $car->brand_id)->first();
                                             $brands = $carBrands;
                                         ?>
                                         <input type="text" name="merk" class="merk" placeholder="Merknaam:{{$brand->brandname}}"/>
 
-                                        <input type="text" name="bouwjaar" class="bouwjaar" placeholder="Bouwjaar: {{$bouwdatum}}"/>
+                                        <input type="text" name="bouwjaar" class="bouwjaar" placeholder="Bouwjaar: {{$car->year}}"/>
                                 </div>
                                 <div class="form-group">
-                                        <input type="text" name="brandstof" class="brandstof" placeholder="Brandstof: {{$brandstof}}"/>
+                                        <input type="text" name="brandstof" class="brandstof" placeholder="Brandstof: {{$carInfo->fuel}}"/>
 
-                                        <input type="text" name="transmissie" class="transmissie" placeholder="Transmissie: {{$transmissie}}"/>
+                                        <input type="text" name="transmissie" class="transmissie" placeholder="Transmissie: {{$carInfo->transmission}}"/>
                                 </div>
                                 <div class="form-group">
-                                        <input type="text" name="km_stand" class="km_stand" placeholder="Kilometerstand: {{$km_stand}}"/>
+                                        <input type="text" name="km_stand" class="km_stand" placeholder="Kilometerstand: {{$carInfo->transmission}}"/>
 
-                                        <input type="text" name="kleur" class="kleur" placeholder="Kleur: {{$kleur}}"/>
+                                        <input type="text" name="kleur" class="kleur" placeholder="Kleur: {{$carInfo->color}}"/>
                                 </div>
                                 <div class="form-group fg-button">
                                         <button type="submit" class="btn btn-primary">Verzenden</button>

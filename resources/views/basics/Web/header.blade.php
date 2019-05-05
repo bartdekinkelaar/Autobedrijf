@@ -8,16 +8,16 @@
 	    		<a href="{{ url('/') }}">HOME</a>
 	    	</li>
 	    	<li>
-	    		<a href="{{ url('occasions') }}">OCCASIONS</a>
+	    		<a href="{{ route('cars.index') }}">OCCASIONS</a>
 	    	</li>
 	    	<li>
-	    		<a href="{{ url('service') }}">DIENSTEN</a>
+	    		<a href="{{ route('service') }}">DIENSTEN</a>
 	    	</li>
 	    	<li>
-	    		<a href="{{ url('overons') }}">OVER ONS</a>
+	    		<a href="{{ route('aboutUs') }}">OVER ONS</a>
 	    	</li>
 	    	<li>
-		    	<a href="{{ url('contact') }}">CONTACT</a>
+		    	<a href="{{ route('contact') }}">CONTACT</a>
 		    </li>
 		</ul>
 	</div>
@@ -36,16 +36,16 @@
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url('occasions') }}">OCCASIONS</a>
+					<a class="nav-link" href="{{ route('cars.index') }}">OCCASIONS</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url('overons') }}">OVER ONS</a>
+					<a class="nav-link" href="{{ route('aboutUs') }}">OVER ONS</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url('service') }}">DIENSTEN</a>
+					<a class="nav-link" href="{{ route('service') }}">DIENSTEN</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url('contact') }}">CONTACT</a>
+					<a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
 				</li>
 			</ul>
 		</div>

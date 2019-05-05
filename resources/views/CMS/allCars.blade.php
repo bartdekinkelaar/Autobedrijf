@@ -21,16 +21,16 @@
                         @foreach($cars as $car)
                             <tr>
                                 <?php
-                                $nice_price = number_format($car->prijs,0,",",".");
-                                $brand  = $carBrands->find($car->merk_id);
+                                $nice_price = number_format($car->price,0,",",".");
+                                $brand  = $carBrands->find($car->brand_id);
                                 $brands = $carBrands;
                                 ?>
-                                <th scope="row">{{$car->naam}}</th>
+                                <th scope="row">{{$car->name}}</th>
                                 <td>€ {{$nice_price}}</td>
-                                <td>{{$brand->merknaam}}</td>
-                                <td>{{$car->bouwjaar}}</td>
-                                <td>{{$car->transmissie}}</td>
-                                <td>{{$car->deuren}} deurs</td>
+                                <td>{{$brand->brandname}}</td>
+                                <td>{{$car->year}}</td>
+                                <td>{{$car->transmission}}</td>
+                                <td>{{$car->doors}} deurs</td>
                                 <td class="componentOpties cO_een">
                                     <a href="{{ url('CMS/car', ['id' => $car->id]) }}">
                                         Bewerken

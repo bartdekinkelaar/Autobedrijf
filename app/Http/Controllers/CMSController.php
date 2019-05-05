@@ -19,8 +19,8 @@ class CMSController extends Controller
         $this->voertuigen       = Car::get();
         $id = Route::current()->parameter('id');
         if($id) {
-            $this->car     = Car::find($id);
-            $this->carInfo   = CarInfo::find($id);
+            $this->car      = Car::find($id);
+            $this->carInfo  = CarInfo::find($id);
         }
 
         $this->cars         = Car::all();
@@ -32,44 +32,44 @@ class CMSController extends Controller
     }
 	public function index()
     {
-        $voertuigen = $this->voertuigen;
-        $kenmerken  = $this->kenmerken;
-        $merken     = $this->merken;
+        $cars       = $this->cars;
+        $features   = $this->features;
+        $brands     = $this->brands;
         $pages      = $this->pages;
         $verkochte  = $this->verkochte;
-        $merk_id        = Car::distinct()->pluck('merk_id');
-        $transmissie    = Car::distinct()->pluck('transmissie');
-        $kleur          = CarInfo::distinct()->pluck('kleur');
-        $brandstof      = CarInfo::distinct()->pluck('brandstof');
+        $brand_id       = Car::distinct()->pluck('brand_id');
+        $transmission   = Car::distinct()->pluck('transmission');
+        $color          = CarInfo::distinct()->pluck('color');
+        $fuel           = CarInfo::distinct()->pluck('fuel');
 
         $pagename   = "Dashboard";
-        return view('CMS.index', compact('voertuigen','pagename',
-            'kenmerken', 'merken', 'pages', 'verkochte',
-            'merk_id','transmissie', 'kleur','brandstof'));
+        return view('CMS.index', compact('cars','pagename',
+            'features', 'brands', 'pages', 'verkochte',
+            'brand_id','transmission', 'color','fuel'));
     }
-    public function nieuw_voertuig()
+    public function newCar()
     {
-        $pagename   = "Voertuig toevoegen";
+        $pagename   = "Create car";
         $merken     = CarBrand::get();
-        return view('CMS.nieuwVoertuig', compact('merken', 'pagename'));
+        return view('CMS.newCar', compact('merken', 'pagename'));
     }
-    public function nieuw_kenmerk()
+    public function newFeature()
     {
-        $pagename   = "Kenmerk toevoegen";
-        $kenmerken     = CarFeature::get();
-        return view('CMS.nieuwKenmerk', compact('kenmerken','pagename'));
+        $pagename   = "Create feature";
+        $features     = CarFeature::get();
+        return view('CMS.newFeature', compact('features','pagename'));
     }
-    public function nieuw_formulier()
+    public function newForm()
     {
-        $pagename   = "Formulier toevoegen";
+        $pagename   = "Create form";
         $formulieren    = DB::table('formulieren')->get();
-        return view('CMS.nieuwFormulier', compact('formulieren','pagenae'));
+        return view('CMS.newForm', compact('formulieren','pagename'));
     }
-    public function nieuw_page()
+    public function newPage()
     {
-        $pagename   = "Page toevoegen";
+        $pagename   = "Create page";
         $templates  = DB::table('page_template')->get();
-        return view('CMS.nieuwPage', compact('templates', 'pagename'));
+        return view('CMS.newPage', compact('templates', 'pagename'));
     }
     public function store(Request $request)
     {
@@ -164,7 +164,7 @@ class CMSController extends Controller
     }
     public function allCars()
     {
-        $pagename   = "Voertuigen";
+        $pagename   = "Cars";
         $pages      = DB::table('pages')
             ->where('name','=', $pagename)->first();
         $page_template = $pages->template_id;
@@ -174,7 +174,7 @@ class CMSController extends Controller
     }
     public function allForms()
     {
-        $pagename       = "Formulieren";
+        $pagename       = "Forms";
         $formulieren    = DB::table('formulieren')->get();
         return view('CMS.allForms', compact('formulieren','pagename'));
     }
@@ -187,7 +187,7 @@ class CMSController extends Controller
     }
     public function allFeatures()
     {
-        $pagename   = "Kenmerken";
+        $pagename   = "Features";
         $count      = CarFeature::count();
         $features   = CarFeature::get();
         return view('CMS.allFeatures', compact('count','features','pagename'));
@@ -197,56 +197,28 @@ class CMSController extends Controller
         if(!empty($number) && isset($number))
         {
             if($number == 1) {
-            $kenmerken = DB::table('voertuig_kenmerken')
-                ->where('kenmerk_id', '>', 10)
-                ->get();
+            $features   = CarFeature::where('kenmerk_id', '>', 10)->get();
             }
             else if($number == 2)
             {
-                $kenmerken = DB::table('voertuig_kenmerken')
-                    ->where('kenmerk_id', '>', 20)
-                    ->get();
+                $features   = CarFeature::where('kenmerk_id', '>', 20)->get();
             }
             $count = CarFeature::count();
-            return view('CMS.alle_kenmerken', compact('count','kenmerken','number'));
+            return view('CMS.allFeatures', compact('count','features','number'));
         }
-        $kenmerken  = CarFeature::get();
-        return view('CMS.alle_kenmerken', compact('kenmerken'));
+        $features  = CarFeature::get();
+        return view('CMS.allFeatures', compact('features'));
     }
     public function getCar($id)
     {
         $carBrands  = CarBrand::all();
-        $voertuig       = $this->voertuig;
-        $voertuignaam   = $voertuig->naam;
-        $bouwjaar   = Car::find($id)->value('bouwjaar');
-        $date       = new Carbon($bouwjaar);
-        $bouwdatum  = $date->year;
+        $car        = $this->car;
+        $carInfo    = CarInfo::find($id);
+        $bouwjaar   = Car::find($id)->value('year');
+        $build_date = Carbon::createFromFormat('Y', $bouwjaar);
+//        $build_date = date(strtotime('Y', $date));
 
-        $brandstof      = $this->brandstof;
-        $kleur          = $this->kleur;
-        $transmissie    = $this->transmissie;
-        $merk_id        = $this->merk_id;
-        $naam           = $this->naam;
-        $prijs          = $this->prijs;
-        $km_stand       = $this->kilometers;
-
-        $APK        = $this->APK;
-        $deuren     = $this->deuren;
-        $gewicht    = $this->gewicht;
-        $vermogen   = $this->vermogen;
-        $laadvermogen   = $this->laadvermogen;
-        $stadsverbruik  = $this->stadsverbruik;
-        $coverbruik     = $this->coverbruik;
-        $verbruik       = $this->verbruik;
-        $topsnelheid    = $this->topsnelheid;
-        $versnellingen  = $this->versnellingen;
-        $zitplaatsen    = $this->zitplaatsen;
-        $cilinder_inhoud    = $this->cilinder_inhoud;
-
-        return view('CMS.getCar', compact('carBrands','voertuignaam','voertuigen', 'naam',
-            'transmissie','kleur','brandstof', 'APK', 'km_stand', 'prijs', 'bouwjaar', 'bouwdatum',
-            'deuren', 'verbruik', 'stadsverbruik', 'vermogen', 'laadvermogen', 'coverbruik',
-            'topsnelheid', 'cilinder_inhoud', 'zitplaatsen', 'merk_id', 'gewicht', 'versnellingen'));
+        return view('CMS.getCar', compact('carBrands','car','build_date','carInfo'));
     }
 
     public function feature($id)
@@ -257,7 +229,7 @@ class CMSController extends Controller
         $feature_standaard  = $feature->kenmerk_standaard;
 
         //return view('show', ['Cars' => $Cars]);
-        return view('CMS.kenmerk', compact('kenmerken','feature_naam',
+        return view('CMS.getFeature', compact('feature','feature_naam',
             'feature_uitleg', 'feature_standaard'));
     }
     public function delete($id)

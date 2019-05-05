@@ -29,11 +29,39 @@ if (!function_exists('get_page_info')) {
                 'has_creator'   => $pageInfo->has_creator,
             );
             return $pageinformatie;
-//        }
-//        else {
-//            $pageinformatie = $pagename;
-//            return $pageinformatie;
-//        }
+    }
+}
+
+if (!function_exists('get_general_info')) {
+    function get_general_info()
+    {
+        $generals   = DB::table('general')->get();
+        $siteName   = $generals->where('name', 'site_name')->first();
+        $siteSubname        = $generals->where('name', 'site_name')->first();
+        $siteDeveloped      = $generals->where('name', 'site_developed')->first();
+        $developerName      = $generals->where('name', 'developer_name')->first();
+        $developerCompany   = $generals->where('name', 'developer_company')->first();
+//        $name   = $generals->where('name', 'company_name')->first();
+        $name   = $generals->where('name', 'company_name')->first();
+        $address   = $generals->where('name', 'company_address')->first();
+        $zipcode   = $generals->where('name', 'company_zipcode')->first();
+        $city   = $generals->where('name', 'company_city')->first();
+        $email  = $generals->where('name', 'company_email')->first();
+        $phone  = $generals->where('name', 'company_phone')->first();
+        $generalInfo = array (
+            'siteName'      => $siteName->value,
+            'siteSubname'   => $siteSubname->value,
+            'siteDeveloped'     => $siteDeveloped->value,
+            'developerName'     => $developerName->value,
+            'developerCompany'  => $developerCompany->value,
+            'companyName'       => $name->value,
+            'companyAddress'    => $address->value,
+            'companyZipcode'    => $zipcode->value,
+            'companyCity'       => $city->value,
+            'companyEmail'      => $email->value,
+            'companyPhone'      => $phone->value,
+        );
+        return $generalInfo;
     }
 }
 

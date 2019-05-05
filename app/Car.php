@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     protected $fillable = [
-        'naam', 'deuren', 'merk_id', 'bouwjaar', 'transmissie', 'prijs'
+        'name', 'doors', 'brand_id', 'year', 'transmission', 'price'
     ];
     protected $primaryKey = 'id';
     protected $table = 'cars';

@@ -12,17 +12,17 @@
 */
 
 //Website pages
-Route::get('/home',     'WebController@home');
-Route::get('/service',  'WebController@service');
-Route::get('/over',     'WebController@aboutUs');
-Route::get('/contact',  'WebController@contact');
+Route::get('/home',     'WebController@home')->name('home');
+Route::get('/service',  'WebController@service')->name('service');
+Route::get('/over',     'WebController@aboutUs')->name('aboutUs');
+Route::get('/contact',  'WebController@contact')->name('contact');
 
 //Car pages
 Route::resource('cars', 'CarController');
-Route::get('/voertuig/{id}', 	'AutoController@specifieke_auto');
-Route::get('/occasions', 	'AutoController@index');
-Route::post('/occasions', 	'AutoController@indexfilter');
-Route::get('/voertuig', 	'AutoController@voertuig');
+//Route::get('/car/{id}', 	'CarController@specifieke_auto');
+//Route::get('/cars', 	'AutoController@index')->name('cars');
+Route::post('/cars', 	'AutoController@indexfilter');
+//Route::get('/car', 	'AutoController@voertuig')->name('car');
 
 //CMS pages
 Route::get('/CMS/nieuw_voertuig', function () {
@@ -48,17 +48,17 @@ Route::get('/CMS/feature/{id}', 'CMSController@feature')->name('CMS.feature');
 
 
 //Route::resource('CMS', 'CMSController');
-Route::get('/CMS/delete/{id}',      'CMSController@delete')->name('CMS.delete');
-Route::get('/CMS/nieuwVoertuig', 	'CMSController@nieuw_voertuig')->name('nieuwVoertuig');
-Route::post('/CMS/nieuwVoertuig', 	'CMSController@store');
-Route::post('/CMS/informatie',      'CMSController@store_info');
-Route::get('/CMS/nieuwKenmerk', 	'CMSController@nieuw_kenmerk')->name('nieuwKenmerk');
-Route::post('/CMS/nieuwKenmerk', 	'CMSController@store_kenmerk');
-Route::get('/CMS/alle_kenmerken/{number}', 'CMSController@next_kenmerken');
-Route::get('/CMS/nieuwFormulier', 	'CMSController@nieuw_formulier')->name('nieuwFormulier');
-Route::post('/CMS/nieuwFormulier',  'CMSController@store_formulier');
-Route::get('/CMS/nieuwPage',        'CMSController@nieuw_page')->name('nieuwPage');
-Route::post('/CMS/nieuwPage',       'CMSController@store_page');
-Route::get('/CMS/CMSall_template/{type}',  'CMSController@new_CMSall')->name('ca_template');
+Route::get('/CMS/delete/{id}',  'CMSController@delete')->name('CMS.delete');
+Route::get('/CMS/newCar', 	    'CMSController@newCar')->name('newCar');
+Route::get('/CMS/newFeature',   'CMSController@newFeature')->name('newFeature');
+Route::get('/CMS/newPage',      'CMSController@newPage')->name('newPage');
+Route::get('/CMS/newForm', 	    'CMSController@newForm')->name('newForm');
+Route::post('/CMS/newCar', 	    'CMSController@store');
+Route::post('/CMS/informatie',  'CMSController@store_info');
+Route::post('/CMS/newFeature',  'CMSController@store_kenmerk');
+Route::post('/CMS/newForm',     'CMSController@store_formulier');
+Route::post('/CMS/newPage',     'CMSController@store_page');
+Route::get('/CMS/alle_kenmerken/{number}',  'CMSController@next_kenmerken');
+Route::get('/CMS/CMSall_template/{type}',   'CMSController@new_CMSall')->name('ca_template');
 
 Route::get('/{page}', 'PageController@show');

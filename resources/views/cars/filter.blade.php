@@ -17,8 +17,8 @@
             <div class="form-group kleingroup">
                 <label for="MerkLabel">MERK</label><br/>
                 <select class="merk" name="merk">
-                    @foreach($merken as $merk)
-                        <option value="{{$merk}}">{{$merk}}</option>
+                    @foreach($carBrands as $brand)
+                        <option value="{{$brand->brand_id}}">{{$brand->brandname}}</option>
                     @endforeach
                 </select>
             </div>

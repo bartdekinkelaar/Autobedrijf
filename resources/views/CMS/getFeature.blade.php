@@ -4,7 +4,7 @@
         <div class="container cmsContainer">
             <div class="row cmsHeading">
                 <h3> {{$feature->kenmerk_naam}} </h3>
-                <a href="{{ route('allFeatures') }}">
+                <a href="{{ route('CMS.features') }}">
                     <button class="backTo_allItems">
                         <i class="fas fa-arrow-left"></i>
                         Terug
